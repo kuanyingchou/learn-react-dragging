@@ -21,7 +21,8 @@ export default class Cell extends Component {
       WebkitUserSelect: 'none',
       transform: `scale(${scale})`,
       zIndex: this.props.front?10:1,
-      fontFamily: 'monospace'
+      fontFamily: 'monospace',
+      boxShadow: '5px 5px 5px rgba(0,0,0,0.5)',
     };
   }
   render() {
@@ -38,7 +39,7 @@ export default class Cell extends Component {
       opacity: 0.5,
       width: windowWidth,
       height: windowHeight,
-      zIndex: 5
+      zIndex: 5,
     };
 
     let content = 
@@ -51,7 +52,7 @@ export default class Cell extends Component {
         style = {{
           s: spring(front ? scale : 1),
           x: spring(front ? windowWidth/2-width/2 : this.props.x),
-          y: spring(front ? windowHeight/2-height/2 : this.props.y)
+          y: spring(front ? windowHeight/2-height/2 : this.props.y),
         }}
         >
         {({s, x, y}) =>
