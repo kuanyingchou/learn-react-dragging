@@ -18,7 +18,7 @@ class Honeycomb extends Component {
         {x:150, y:150, id:1, holded: false, front:false},
         {x:200, y:200, id:2, holded: false, front:false}
       ],
-      holdIndex: -1
+      holdIndex: -1,
     };
   }
 
@@ -27,7 +27,7 @@ class Honeycomb extends Component {
     this.setState({
       oldMouseX: e.clientX,
       oldMouseY: e.clientY,
-      holdIndex: idx
+      holdIndex: idx,
     });
   }
   handleCellMouseUp(e, idx) {
@@ -42,7 +42,7 @@ class Honeycomb extends Component {
         mouseX: e.clientX, 
         mouseY: e.clientY,
         oldMouseX: 0, 
-        oldMouseY: 0
+        oldMouseY: 0,
       });
     }
   }
